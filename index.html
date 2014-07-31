@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="angular.min.js"></script>
+	<script src="script.js"></script>
+</head>
+<body ng-app="site">
+	<div ng-controller="SiteController as site" class="blog-list">
+		<div ng-repeat="blog in site.blogs" ng-show="blog.show" class="blog-wrapper">
+			<h3>{{ blog.title }}</h3>
+			<p>{{ blog.content }}</p>
+			<em>{{ blog.date }}</em>
+		</div>		
+	</div>
+</body>
+</html>
